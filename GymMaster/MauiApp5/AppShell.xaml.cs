@@ -2,8 +2,13 @@
 
 public partial class AppShell : Shell
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public AppShell()
+    {
+        object value = InitializeComponent();
+    }
+
+    private object InitializeComponent()
+    {
+        throw new NotImplementedException();
+    }
 }

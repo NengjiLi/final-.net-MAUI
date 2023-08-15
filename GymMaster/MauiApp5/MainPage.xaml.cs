@@ -1,20 +1,43 @@
-﻿namespace MauiApp5;
+﻿using MauiApp5.Pages;
+
+namespace MauiApp5;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    public MainPage()
+    {
+        object value = InitializeComponent();
+    }
+
+    private object InitializeComponent()
+    {
+        throw new NotImplementedException();
+    }
 
     private async void Member_Click(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new MauiApp5.Pages.Member());
+        object value = await Navigation.PushAsync(new Pages.Member());
     }
 
     private async void MemberAC_Click(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new MauiApp5.Pages.MemberAccess());
+        await Navigation.PushAsync(new MemberAccess());
     }
 }
 
+internal class Navigation
+{
+    internal static Task<object> PushAsync(Member member)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal static Task PushAsync(MemberAccess memberAccess)
+    {
+        throw new NotImplementedException();
+    }
+}
+
+public class ContentPage
+{
+}
